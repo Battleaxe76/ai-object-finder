@@ -4,10 +4,10 @@ objects=[];
 
 
 function setup(){
-    canvas=createCanvas(480,380);
+    canvas=createCanvas(600,600);
     canvas.center();
     video=createCapture(VIDEO)
-video.size(480,380)
+video.size(600,600)
 video.hide()
 }
 function start(){
@@ -31,7 +31,7 @@ function gotResult(error,results){
     objects=results;
 }
 function draw(){
-    image(video,0,0,480,380);
+    image(video,0,0,600,600);
 if(status!=""){
     objectDetector.detect(video,gotResult);
     for(i=0;i<objects.length;i++){
